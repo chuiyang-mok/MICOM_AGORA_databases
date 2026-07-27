@@ -18,9 +18,9 @@ is named `qiime2-2023.2`.
 Add the additional requirements.
 
 ```bash
-conda env update -n qiime2-2023.2 -f conda.yml
+conda env create -f q2-micom-2026.4.yml
 
-conda activate qiime2-2023.2
+conda activate q2-micom-2026.4
 ```
 
 You will now be able to build the databases by running the Nextflow workflows in each
