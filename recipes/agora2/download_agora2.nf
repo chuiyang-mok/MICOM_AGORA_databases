@@ -21,7 +21,7 @@ process download {
     maxRetries 3
 
     input:
-    tuple val(id)
+    val(id)
 
     output:
     tuple val(id), path("${id}.mat")
