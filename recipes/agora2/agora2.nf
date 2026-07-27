@@ -4,7 +4,7 @@ params.out = "${launchDir}"
 params.manifest = "${params.out}/data/agora201.csv"
 params.agora_version = "201"
 params.refseq = "232"
-params.gtdb = "226"
+params.gtdb = "232"
 params.database_version = "2"
 params.models = "${params.out}/models"
 
@@ -65,10 +65,10 @@ process DownloadGtdbTables {
 
     script:
     """
-    wget --no-check-certificate -O gtdb_bac.tar.gz https://data.gtdb.ecogenomic.org/releases/release${params.gtdb}/${params.gtdb}.0/bac120_metadata_r${params.gtdb}.tsv.gz
-    wget --no-check-certificate -O gtdb_ar.tar.gz https://data.gtdb.ecogenomic.org/releases/release${params.gtdb}/${params.gtdb}.0/ar53_metadata_r${params.gtdb}.tsv.gz
-    tar -xf gtdb_bac.tar.gz
-    tar -xf gtdb_ar.tar.gz
+    wget --no-check-certificate -O gtdb_bac.tsv.gz https://data.gtdb.ecogenomic.org/releases/release${params.gtdb}/${params.gtdb}.0/bac120_metadata_r${params.gtdb}.tsv.gz
+    wget --no-check-certificate -O gtdb_ar.tsv.gz https://data.gtdb.ecogenomic.org/releases/release${params.gtdb}/${params.gtdb}.0/ar53_metadata_r${params.gtdb}.tsv.gz
+    gunzip -f gtdb_bac.tsv.gz
+    gunzip -f gtdb_ar.tsv.gz
     """
 }
 
