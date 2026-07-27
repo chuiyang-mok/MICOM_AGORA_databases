@@ -111,6 +111,7 @@ process ConvertToGtdb {
     rank_mappings = merged.groupby("file")["${level}"].nunique()
     valid = rank_mappings.index[rank_mappings == 1]
     merged = merged[merged.file.isin(valid)].drop_duplicates(subset=["file", "${level}"])
+    merged.rename(columns={"domain": "kingdom"}, inplace=True)
 
     print(f"rank: ${level} - matched: {merged.shape[0]}/{agora.shape[0]}")
 
