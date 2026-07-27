@@ -13,7 +13,7 @@ See the releases for the Zenodo links to download databases for a specific versi
 ## Local setup
 
 Install Qiime2 following the normal conda instructions. Let's assume your Qiime2 environments
-is named `qiime2-2023.2`.
+is named `q2-micom-2026.4`.
 
 Add the additional requirements.
 
