@@ -49,6 +49,15 @@ root
                |databases           # databases that were built
 ```
 
+## Manifests file
+Files generated are in .tsv format, manually change to .csv in the meantime, fix on the way
+```
+agora201_gtdb232_genus_1.tsv
+agora201_refseq232_genus_1.tsv  
+agora201_gtdb232_species_1.tsv
+agora201_refseq232_species_1.tsv
+```
+
 ## Databases
 
 **AGORA 1**<br>
